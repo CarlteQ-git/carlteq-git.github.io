@@ -499,6 +499,7 @@
             render(visibleTriggers().indexOf(trigger));
             box.hidden = false;
             document.body.classList.add('lightbox-open');
+            document.dispatchEvent(new CustomEvent('cursor:reset'));
             closeBtn.focus();
         }
 
@@ -506,6 +507,7 @@
             box.hidden = true;
             document.body.classList.remove('lightbox-open');
             img.removeAttribute('src');
+            document.dispatchEvent(new CustomEvent('cursor:reset'));
             if (lastFocused) lastFocused.focus();
         }
 
@@ -545,6 +547,136 @@
         });
     }
 
+    /* ---------- Custom Cursor (gold dot + trailing ring) ---------- */
+    function initCustomCursor() {
+        if (!window.matchMedia) return;
+        if (!window.matchMedia('(pointer: fine)').matches) return;
+        if (REDUCED_MOTION) return;
+
+        var dotWrap = document.createElement('div');
+        dotWrap.className = 'cursor-item cursor-dot-wrap';
+        var dot = document.createElement('div');
+        dot.className = 'cursor-dot';
+        dotWrap.appendChild(dot);
+
+        var ringWrap = document.createElement('div');
+        ringWrap.className = 'cursor-item cursor-ring-wrap';
+        var ring = document.createElement('div');
+        ring.className = 'cursor-ring';
+        var label = document.createElement('span');
+        label.className = 'cursor-label';
+        label.textContent = 'View';
+        ring.appendChild(label);
+        ringWrap.appendChild(ring);
+
+        var pulse = document.createElement('div');
+        pulse.className = 'cursor-item cursor-pulse';
+
+        document.body.appendChild(dotWrap);
+        document.body.appendChild(ringWrap);
+        document.body.appendChild(pulse);
+        document.documentElement.classList.add('cursor-none');
+
+        var mx = -100, my = -100;
+        var rx = -100, ry = -100;
+        var inside = false;
+        var running = false;
+        var rafId = 0;
+
+        function syncVisibility() {
+            dotWrap.classList.toggle('is-visible', inside);
+            ringWrap.classList.toggle('is-visible', inside);
+        }
+
+        function setState(cls, on) {
+            dotWrap.classList.toggle(cls, on);
+            ringWrap.classList.toggle(cls, on);
+        }
+
+        function frame() {
+            if (!running) return;
+            rx += (mx - rx) * 0.2;
+            ry += (my - ry) * 0.2;
+            dotWrap.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+            ringWrap.style.transform = 'translate3d(' + rx.toFixed(2) + 'px,' + ry.toFixed(2) + 'px,0)';
+            rafId = requestAnimationFrame(frame);
+        }
+
+        function start() {
+            if (running) return;
+            running = true;
+            rafId = requestAnimationFrame(frame);
+        }
+
+        function stop() {
+            running = false;
+            if (rafId) cancelAnimationFrame(rafId);
+            rafId = 0;
+        }
+
+        document.addEventListener('mousemove', function (e) {
+            mx = e.clientX;
+            my = e.clientY;
+            if (!inside) {
+                inside = true;
+                rx = mx;
+                ry = my;
+                syncVisibility();
+            }
+        }, { passive: true });
+
+        document.addEventListener('mouseenter', function () {
+            inside = true;
+            start();
+            syncVisibility();
+        });
+
+        document.addEventListener('mouseleave', function () {
+            inside = false;
+            syncVisibility();
+        });
+
+        document.addEventListener('mouseover', function (e) {
+            var target = e.target;
+            if (!target || !target.closest) return;
+
+            var isView = !!target.closest('.gallery-trigger');
+            var isInteractive = !!target.closest('a, button, [role="button"], [data-tilt]');
+            var textField = target.closest('textarea, select, input');
+            var isText = !!textField && textField.type !== 'submit' && textField.type !== 'button';
+
+            setState('is-view', isView);
+            setState('is-hover', isInteractive && !isView);
+            setState('is-hidden', isText);
+        });
+
+        document.addEventListener('mousedown', function () {
+            setState('is-down', true);
+        });
+        document.addEventListener('mouseup', function () {
+            setState('is-down', false);
+        });
+
+        document.addEventListener('click', function (e) {
+            pulse.style.transform = 'translate3d(' + e.clientX + 'px,' + e.clientY + 'px,0)';
+            pulse.classList.remove('is-active');
+            void pulse.offsetWidth;
+            pulse.classList.add('is-active');
+        });
+
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) { stop(); } else { start(); }
+        });
+
+        document.addEventListener('cursor:reset', function () {
+            setState('is-view', false);
+            setState('is-hover', false);
+            setState('is-hidden', false);
+        });
+
+        start();
+    }
+
     /* ---------- Legacy Reveal Fallback (for inner pages) ---------- */
     function initLegacyReveal() {
         var revealEls = document.querySelectorAll('.reveal');
@@ -575,6 +707,7 @@
         initPortfolioFilter();
         initGalleryFilter();
         initLightbox();
+        initCustomCursor();
 
         if (isHome) {
             if (NO_GSAP || REDUCED_MOTION) {

@@ -40,7 +40,7 @@ body {
     overflow-x: clip;
     line-height: 1.7;
 }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; }
 button { cursor: pointer; }
 ::selection { background: var(--gold-main); color: #000; }
@@ -800,7 +800,12 @@ footer {
     filter: grayscale(0%); transform: scale(1.05);
 }
 /* Brand work keeps colour readable - identity depends on it */
-.project-thumb.shot.brand img { filter: grayscale(25%) saturate(0.95); }
+.project-thumb.shot.brand { background: var(--bg-void); }
+.project-thumb.shot.brand img {
+    object-fit: contain;
+    padding: 2.75rem 1.25rem 1.25rem;
+    filter: grayscale(25%) saturate(0.95);
+}
 .project-card:hover .project-thumb.shot.brand img { filter: grayscale(0%) saturate(1.05); }
 .portfolio-cta { text-align: center; margin-top: 5rem; }
 
@@ -1158,3 +1163,102 @@ html.no-anim .scroll-line { animation: none; }
 .dropdown > .dropdown-toggle.active { color: var(--gold-main); }
 
 body.nav-open { overflow: hidden !important; }
+
+/* ============================================================
+   Custom Cursor — gold dot + trailing ring
+   Enabled via JS only for fine pointers without reduced motion
+   ============================================================ */
+html.cursor-none * { cursor: none; }
+html.cursor-none input,
+html.cursor-none textarea,
+html.cursor-none select { cursor: auto; }
+
+.cursor-item {
+    position: fixed; top: 0; left: 0;
+    width: 0; height: 0;
+    pointer-events: none;
+    will-change: transform;
+    z-index: 10060;
+}
+.cursor-dot,
+.cursor-ring {
+    position: absolute; top: 0; left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+    transition:
+        opacity 0.2s ease,
+        width 0.35s var(--ease-out-expo),
+        height 0.35s var(--ease-out-expo),
+        border-color 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.cursor-item.is-visible .cursor-dot,
+.cursor-item.is-visible .cursor-ring { opacity: 1; }
+
+.cursor-dot {
+    width: 6px; height: 6px;
+    background: var(--gold-light);
+    box-shadow: 0 0 8px rgba(249, 223, 159, 0.95), 0 0 22px rgba(212, 175, 55, 0.5);
+}
+.cursor-ring {
+    width: 34px; height: 34px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid rgba(212, 175, 55, 0.55);
+    background: rgba(212, 175, 55, 0.02);
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.14), inset 0 0 14px rgba(212, 175, 55, 0.07);
+}
+
+/* Hovering links / buttons */
+.cursor-item.is-hover .cursor-ring {
+    width: 56px; height: 56px;
+    border-color: var(--gold-main);
+    background: rgba(212, 175, 55, 0.1);
+    box-shadow: 0 0 26px rgba(212, 175, 55, 0.28), inset 0 0 18px rgba(212, 175, 55, 0.12);
+}
+.cursor-item.is-hover .cursor-dot { width: 4px; height: 4px; }
+
+/* Hovering gallery images */
+.cursor-item.is-view .cursor-ring {
+    width: 84px; height: 84px;
+    border-color: rgba(212, 175, 55, 0.8);
+    background: rgba(4, 7, 14, 0.6);
+    box-shadow: 0 0 34px rgba(212, 175, 55, 0.3), inset 0 0 22px rgba(212, 175, 55, 0.14);
+}
+.cursor-item.is-view .cursor-dot { width: 0; height: 0; opacity: 0; }
+.cursor-label {
+    font-family: var(--font-mono);
+    font-size: 0.55rem; letter-spacing: 1.6px; text-transform: uppercase;
+    color: var(--gold-light);
+    opacity: 0; transition: opacity 0.2s ease;
+}
+.cursor-item.is-view .cursor-label { opacity: 1; }
+
+/* Pressing */
+.cursor-item.is-down .cursor-ring { width: 26px; height: 26px; }
+.cursor-item.is-down.is-hover .cursor-ring { width: 48px; height: 48px; }
+.cursor-item.is-down.is-view .cursor-ring { width: 72px; height: 72px; }
+
+/* Hide over text fields (native caret restored) */
+.cursor-item.is-hidden .cursor-dot,
+.cursor-item.is-hidden .cursor-ring { opacity: 0; }
+
+/* Click "ding" pulse */
+.cursor-pulse { z-index: 10059; }
+.cursor-pulse::after {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    border: 1px solid var(--gold-main);
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0;
+}
+.cursor-pulse.is-active::after {
+    animation: cursorPulse 0.65s var(--ease-out-expo) forwards;
+}
+@keyframes cursorPulse {
+    0% { opacity: 0.9; transform: translate(-50%, -50%) scale(0.4); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(2.6); }
+}
