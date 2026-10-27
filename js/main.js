@@ -1,5 +1,5 @@
-/* ============================================================
-   CarlteQ — Main JavaScript v3
+﻿/* ============================================================
+   CarlteQ ΓÇö Main JavaScript v3
    Zoom intro, blob canvas, GSAP animations, smooth scroll
    ============================================================ */
 (function () {
@@ -597,8 +597,8 @@
             if (!running) return;
             rx += (mx - rx) * 0.2;
             ry += (my - ry) * 0.2;
-            dotWrap.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
-            ringWrap.style.transform = 'translate3d(' + rx.toFixed(2) + 'px,' + ry.toFixed(2) + 'px,0)';
+        dotWrap.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        ringWrap.style.transform = 'translate3d(' + rx.toFixed(2) + 'px,' + ry.toFixed(2) + 'px,0) rotate(45deg)';
             rafId = requestAnimationFrame(frame);
         }
 
@@ -658,7 +658,7 @@
         });
 
         document.addEventListener('click', function (e) {
-            pulse.style.transform = 'translate3d(' + e.clientX + 'px,' + e.clientY + 'px,0)';
+            pulse.style.transform = 'translate3d(' + e.clientX + 'px,' + e.clientY + 'px,0) rotate(45deg)';
             pulse.classList.remove('is-active');
             void pulse.offsetWidth;
             pulse.classList.add('is-active');
