@@ -549,7 +549,6 @@
 
     /* ---------- Custom Cursor (gold dot + trailing ring) ---------- */
     function initCustomCursor() {
-        try {
         if (!window.matchMedia) return;
         if (!window.matchMedia('(pointer: fine)').matches) return;
         if (REDUCED_MOTION) return;
@@ -677,8 +676,6 @@
 
         start();
     }
-    } catch (e) { /* ignore */ }
-    }
 
     /* ---------- Legacy Reveal Fallback (for inner pages) ---------- */
     function initLegacyReveal() {
@@ -710,8 +707,7 @@
         initPortfolioFilter();
         initGalleryFilter();
         initLightbox();
-        if (typeof initCustomCursor === 'function') { try { initCustomCursor(); } catch(e){} }
-        if (typeof initContactForm === 'function') { try { initContactForm(); } catch(e){} }
+        initCustomCursor();
 
         if (isHome) {
             if (NO_GSAP || REDUCED_MOTION) {
