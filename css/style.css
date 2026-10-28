@@ -1214,15 +1214,15 @@ html.cursor-none select { cursor: auto; }
 .cursor-dot {
     width: 6px; height: 6px;
     background: var(--gold-light);
-    box-shadow: 0 0 8px rgba(249, 223, 159, 0.95), 0 0 22px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 8px rgba(249, 223, 159, 0.95), 0 0 22px rgba(212, 175, 55, 0.6);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 .cursor-ring {
     width: 34px; height: 34px;
     display: flex; align-items: center; justify-content: center;
-    border: 1px solid rgba(212, 175, 55, 0.6);
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, rgba(212, 175, 55, 0.02) 70%);
-    box-shadow: 0 0 18px rgba(212, 175, 55, 0.18), inset 0 0 16px rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.7);
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0.04) 70%);
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.24), inset 0 0 16px rgba(212, 175, 55, 0.14);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     transform: translate(-50%, -50%) rotate(45deg);
 }
@@ -1231,17 +1231,17 @@ html.cursor-none select { cursor: auto; }
 .cursor-item.is-hover .cursor-ring {
     width: 56px; height: 56px;
     border-color: var(--gold-main);
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.16) 0%, rgba(212, 175, 55, 0.06) 70%);
-    box-shadow: 0 0 28px rgba(212, 175, 55, 0.32), inset 0 0 20px rgba(212, 175, 55, 0.16);
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, rgba(212, 175, 55, 0.08) 70%);
+    box-shadow: 0 0 28px rgba(212, 175, 55, 0.38), inset 0 0 20px rgba(212, 175, 55, 0.22);
 }
 .cursor-item.is-hover .cursor-dot { width: 4px; height: 4px; }
 
 /* Hovering gallery images */
 .cursor-item.is-view .cursor-ring {
     width: 88px; height: 88px;
-    border-color: rgba(212, 175, 55, 0.9);
-    background: radial-gradient(circle, rgba(4, 7, 14, 0.7) 0%, rgba(4, 7, 14, 0.5) 70%);
-    box-shadow: 0 0 38px rgba(212, 175, 55, 0.36), inset 0 0 26px rgba(212, 175, 55, 0.18);
+    border-color: rgba(212, 175, 55, 0.95);
+    background: radial-gradient(circle, rgba(4, 7, 14, 0.75) 0%, rgba(4, 7, 14, 0.55) 70%);
+    box-shadow: 0 0 38px rgba(212, 175, 55, 0.42), inset 0 0 26px rgba(212, 175, 55, 0.24);
 }
 .cursor-item.is-view .cursor-dot { width: 0; height: 0; opacity: 0; }
 .cursor-label {
