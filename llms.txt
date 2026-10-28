@@ -1,0 +1,25 @@
+# llms.txt for carlteq.io
+
+> CarlteQ is a creative technology studio based in Nairobi, Kenya. We build brand identity, web systems, marketing, and events.
+
+## Key Pages
+- [Home](https://carlteq.io/): Overview of services and portfolio
+- [About](https://carlteq.io/about.html): Studio background and approach
+- [Portfolio](https://carlteq.io/portfolio.html): Selected work
+- [Branding](https://carlteq.io/branding.html): Brand identity case studies
+- [Web Systems](https://carlteq.io/web-systems.html): Websites, web apps, and digital products
+- [Marketing](https://carlteq.io/marketing.html): Growth and creative marketing
+- [Events](https://carlteq.io/events.html): Event production and experiences
+- [Contact](https://carlteq.io/contact.html): Get in touch
+
+## Contact
+- Email: info@carlteq.io
+- WhatsApp: https://wa.me/254799213928
+- Location: Nairobi, Kenya
+
+## Services
+- Brand Identity & Design
+- Web Design & Development
+- Digital Marketing
+- Event Production
+- Creative Technology

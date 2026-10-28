@@ -547,7 +547,54 @@
         });
     }
 
-    /* ---------- Custom Cursor (gold dot + trailing ring) ---------- */
+    /* ---------- WebMCP (in-browser tools for agents) ---------- */
+    function initWebMCP() {
+        try {
+            if (typeof navigator === 'undefined') return;
+            if (!navigator.modelContext) return;
+            if (typeof navigator.modelContext.registerTool !== 'function') return;
+
+            navigator.modelContext.registerTool({
+                name: 'get_carlteq_services',
+                description: 'List CarlteQ services',
+                inputSchema: { type: 'object', properties: {} },
+                execute: async function () {
+                    return [
+                        { name: 'Brand Identity & Design' },
+                        { name: 'Web Design & Development' },
+                        { name: 'Digital Marketing' },
+                        { name: 'Event Production' },
+                        { name: 'Creative Technology' }
+                    ];
+                }
+            });
+
+            navigator.modelContext.registerTool({
+                name: 'get_carlteq_portfolio',
+                description: 'Get CarlteQ portfolio links',
+                inputSchema: { type: 'object', properties: {} },
+                execute: async function () {
+                    return [
+                        { title: 'Portfolio', url: 'https://carlteq.io/portfolio.html' },
+                        { title: 'Branding', url: 'https://carlteq.io/branding.html' }
+                    ];
+                }
+            });
+
+            navigator.modelContext.registerTool({
+                name: 'submit_contact_inquiry',
+                description: 'Get contact details for CarlteQ',
+                inputSchema: { type: 'object', properties: {} },
+                execute: async function () {
+                    return {
+                        email: 'info@carlteq.io',
+                        whatsapp: 'https://wa.me/254799213928',
+                        form: 'https://carlteq.io/contact.html'
+                    };
+                }
+            });
+        } catch (e) {}
+    }
     function initCustomCursor() {
         if (!window.matchMedia) return;
         if (!window.matchMedia('(pointer: fine)').matches) return;
@@ -708,6 +755,8 @@
         initGalleryFilter();
         initLightbox();
         initCustomCursor();
+
+        if (typeof initWebMCP === 'function') { try { initWebMCP(); } catch(e){} }
 
         if (isHome) {
             if (NO_GSAP || REDUCED_MOTION) {

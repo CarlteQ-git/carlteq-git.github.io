@@ -1,0 +1,22 @@
+{
+  "name": "CarlteQ MCP Server",
+  "version": "1.0.0",
+  "description": "MCP server card for CarlteQ creative technology studio.",
+  "endpoint": "https://carlteq.io/mcp",
+  "capabilities": {
+    "tools": [
+      {
+        "name": "get_portfolio",
+        "description": "Get CarlteQ portfolio items"
+      },
+      {
+        "name": "get_services",
+        "description": "Get list of CarlteQ services"
+      },
+      {
+        "name": "contact_inquiry",
+        "description": "Submit a contact inquiry"
+      }
+    ]
+  }
+}
