@@ -1295,3 +1295,18 @@ html.cursor-none select { cursor: auto; }
 .section-white .grid-bg { display: none; }
 .section-white .sticky-card { background: #ffffff; color: #101820; border-color: rgba(16, 24, 32, 0.12); }
 .section-white .sticky-card p { color: #3f3a32; }
+
+/* Blue cursor on white sections for visibility */
+.section-white ~ .cursor-item .cursor-dot,
+.section-white + .cursor-item .cursor-dot,
+.cursor-item.in-white .cursor-dot {
+    background: #0b7bff;
+    box-shadow: 0 0 8px rgba(11, 123, 255, 0.95), 0 0 22px rgba(11, 123, 255, 0.6);
+}
+.section-white ~ .cursor-item .cursor-ring,
+.section-white + .cursor-item .cursor-ring,
+.cursor-item.in-white .cursor-ring {
+    border-color: rgba(11, 123, 255, 0.7);
+    background: radial-gradient(circle, rgba(11, 123, 255, 0.12) 0%, rgba(11, 123, 255, 0.04) 70%);
+    box-shadow: 0 0 18px rgba(11, 123, 255, 0.24), inset 0 0 16px rgba(11, 123, 255, 0.14);
+}
