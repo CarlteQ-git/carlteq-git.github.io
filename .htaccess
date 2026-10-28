@@ -1,0 +1,20 @@
+# Enable headers
+<IfModule mod_headers.c>
+    Header always set Link "<https://carlteq.io/llms.txt>; rel=\"llms-txt\", <https://carlteq.io/index.md>; rel=\"alternate\"; type=\"text/markdown\""
+</IfModule>
+
+# Markdown content negotiation for agents
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+    RewriteCond %{REQUEST_URI} ^/$
+    RewriteRule ^$ index.md [L]
+    RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+    RewriteCond %{REQUEST_URI} ^/index\.html$
+    RewriteRule ^index\.html$ index.md [L]
+</IfModule>
+
+# Set correct content type for .md files
+<IfModule mod_mime.c>
+    AddType text/markdown .md
+</IfModule>
