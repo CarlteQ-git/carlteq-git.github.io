@@ -666,7 +666,7 @@
                 var el = document.elementFromPoint(x, y);
                 var inLight = false;
                 while (el && el !== document.body && el !== document.documentElement) {
-                    if (el.classList && (el.classList.contains('section-white') || el.classList.contains('events-band-warm'))) { inLight = true; break; }
+                    if (el.classList && (el.classList.contains('section-white') || el.classList.contains('events-band-warm') || el.classList.contains('brand-band-warm'))) { inLight = true; break; }
                     el = el.parentElement;
                 }
                 dotWrap.classList.toggle('in-white', inLight);
