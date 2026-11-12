@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Events & Experience by CarlteQ: consultation-led event planning, curated packages for birthdays and weddings, and à la carte rentals including tents, tables, and chairs with delivery, setup, and takedown in Nairobi, Kenya.">
+    <meta name="description" content="Events & Experience by CarlteQ in Nairobi: consultation-led planning, birthday and wedding packages, à la carte rentals (tents, chairs, tables), venue sourcing, delivery, setup, and takedown for small and medium events.">
     <title>Events & Experience | CarlteQ</title>
     <link rel="icon" type="image/svg+xml" href="assets/carlteq-logo.svg">
     <link rel="canonical" href="https://carlteq.io/events.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="CarlteQ">
     <meta property="og:title" content="Events & Experience | CarlteQ">
-    <meta property="og:description" content="Consultation-led event support, curated packages, and à la carte rentals for small and medium events in Nairobi, Kenya.">
+    <meta property="og:description" content="Consultation-led event planning, curated packages, and à la carte rentals for small and medium events in Nairobi, Kenya.">
     <meta property="og:url" content="https://carlteq.io/events.html">
-    <meta property="og:image" content="https://carlteq.io/assets/og-image.png">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200&auto=format&fit=crop">
     <meta property="og:locale" content="en_KE">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Events & Experience | CarlteQ">
-    <meta name="twitter:description" content="Consultation-led event support, curated packages, and à la carte rentals for small and medium events in Nairobi, Kenya.">
-    <meta name="twitter:image" content="https://carlteq.io/assets/og-image.png">
+    <meta name="twitter:description" content="Consultation-led event planning, curated packages, and à la carte rentals for small and medium events in Nairobi, Kenya.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200&auto=format&fit=crop">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
@@ -27,16 +27,42 @@
         "@context": "https://schema.org",
         "@type": "Service",
         "serviceType": "Events & Experience",
+        "name": "CarlteQ Events & Experience",
         "provider": {
             "@type": "Organization",
             "name": "CarlteQ",
             "url": "https://carlteq.io/"
         },
-        "areaServed": {
-            "@type": "City",
-            "name": "Nairobi"
-        },
-        "description": "Consultation-led event planning, curated packages, and à la carte rentals for small and medium events."
+        "areaServed": ["Nairobi", "Kenya"],
+        "description": "Consultation-led event planning, curated packages, and à la carte rentals for small and medium events. Includes delivery, setup, takedown, and venue sourcing support."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Do you cater for large events?",
+                "acceptedAnswer": {"@type": "Answer", "text": "At the moment, CarlteQ caters for small and medium-sized events so we can deliver a focused, high-quality experience."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I rent only tents, chairs, or tables?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can rent specific items à la carte. We deliver, set everything up, and return to take it down after your event."}
+            },
+            {
+                "@type": "Question",
+                "name": "Do you help with venues like hotels or gardens?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes. We can help with booking or coordinating venues such as hotels and gardens, or work with a venue you already have."}
+            },
+            {
+                "@type": "Question",
+                "name": "How do I get started?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Reach out with your event type, date, location, and estimated guest count. We’ll start with a consultation and recommend the right package or rental setup for your needs."}
+            }
+        ]
     }
     </script>
 </head>
@@ -61,129 +87,335 @@
                 </div>
             </div>
             <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html" class="btn-primary">Contact Us</a>
+            <a href="contact.html?service=events" class="btn-primary">Book a Consultation</a>
         </div>
     </nav>
 
     <main id="main">
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
-            <h1>Events & <span class="gold-gradient">Experience</span></h1>
-            <p class="lead">Consultation-led event support for small and medium occasions — from curated packages to individual rentals, delivered, set up, and taken down for you.</p>
+    <!-- Hero / Page Header -->
+    <header class="page-header events-hero">
+        <div class="container events-hero-inner">
+            <div class="events-hero-copy">
+                <span class="eyebrow">Small &amp; Medium Events &middot; Nairobi, Kenya</span>
+                <h1>Events & <span class="gold-gradient">Experience</span></h1>
+                <p class="lead">Consultation-led planning, curated packages, and à la carte rentals — delivered, set up, and taken down for a seamless celebration.</p>
+                <div class="hero-actions events-hero-actions">
+                    <a href="contact.html?service=events" class="btn-primary btn-lg">Book a Consultation</a>
+                    <a href="#packages" class="btn-outline btn-lg">View Packages</a>
+                </div>
+                <p class="events-hero-note">No fixed packages forced. We recommend what fits your occasion, space, and guest count.</p>
+            </div>
+            <div class="events-hero-media">
+                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1400&auto=format&fit=crop" alt="Elegant event reception setup with warm lighting" loading="eager" decoding="async">
+            </div>
         </div>
     </header>
 
-    <!-- Intro / Consultation -->
-    <section class="section-padding container">
-        <div class="service-layout">
-            <div class="service-text">
-                <h2>Start with a <br><span class="gold-gradient">Consultation</span></h2>
-                <p>Every event is different. We begin with a consultation to understand your occasion, guest count, venue, style, and priorities, then suggest what you actually need — no guesswork, no unnecessary extras.</p>
-                <p>Whether you want a complete package or just specific items, we make it simple. We currently cater for <strong>small and medium-sized events</strong>.</p>
-                <ul class="service-list">
-                    <li>Personalized consultation and recommendations</li>
-                    <li>Curated event packages for key occasions</li>
-                    <li>À la carte rentals for individual items</li>
-                    <li>Venue sourcing support (hotels, gardens, and more)</li>
-                </ul>
+    <!-- How it works -->
+    <section class="section-padding events-band events-band-elevated" id="how-it-works">
+        <div class="container">
+            <div class="center" style="margin-bottom: 2.5rem;">
+                <span class="eyebrow">Our Process</span>
+                <h2 class="section-title">How It <span class="gold-gradient">Works</span></h2>
+                <p class="section-subtitle">A simple, guided process designed to make planning easier and the final setup feel premium.</p>
             </div>
-            <div>
-                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop" alt="Elegant event setup" class="service-img" loading="lazy" decoding="async">
+            <div class="events-steps">
+                <article class="events-step">
+                    <span class="events-step-num">01</span>
+                    <h3>Consult</h3>
+                    <p>Tell us your event type, date, location, and estimated guest count. We listen first and understand what matters most.</p>
+                </article>
+                <article class="events-step">
+                    <span class="events-step-num">02</span>
+                    <h3>Recommend</h3>
+                    <p>We suggest the right package or individual items for your occasion, venue, and style — tailored, not one-size-fits-all.</p>
+                </article>
+                <article class="events-step">
+                    <span class="events-step-num">03</span>
+                    <h3>Deliver &amp; Set Up</h3>
+                    <p>We bring everything to you and handle setup so your space is ready and cohesive before guests arrive.</p>
+                </article>
+                <article class="events-step">
+                    <span class="events-step-num">04</span>
+                    <h3>Takedown</h3>
+                    <p>After the event, we return to take everything down. All-inclusive service for a stress-free experience.</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Packages -->
-    <section class="section-padding" style="background: rgba(255,255,255,0.02);">
+    <!-- Packages (warm color break) -->
+    <section class="section-padding events-band events-band-warm" id="packages">
         <div class="container">
-            <div class="center" style="margin-bottom: 3rem;">
-                <h2 class="section-title">Curated <span class="gold-gradient">Packages</span></h2>
-                <p class="section-subtitle">Tailored combinations based on your event type and needs. We’ll refine the details together during consultation.</p>
+            <div class="center" style="margin-bottom: 2.5rem;">
+                <span class="eyebrow">Curated Options</span>
+                <h2 class="section-title">Event <span class="gold-gradient">Packages</span></h2>
+                <p class="section-subtitle">Thoughtful combinations for popular occasions. We refine every package during consultation to suit your space, theme, and needs.</p>
             </div>
-            <div class="cards-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem;">
-                <article class="card" style="padding:2rem;">
-                    <h3 style="margin-bottom:0.75rem;">Birthday Package</h3>
-                    <p style="color:var(--text-secondary); margin-bottom:1rem;">A festive, well-coordinated setup for memorable birthday celebrations.</p>
-                    <ul class="service-list" style="margin-top:0;">
-                        <li>Tents / canopies (as needed)</li>
-                        <li>Tables and chairs</li>
-                        <li>Decorations and styling</li>
-                        <li>Balloons and ribbons</li>
-                        <li>Coordinated setup to match your theme</li>
-                    </ul>
+            <div class="events-package-grid">
+                <article class="events-package-card">
+                    <div class="events-package-media">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=1200&auto=format&fit=crop" alt="Birthday celebration decor with balloons and table setup" loading="lazy" decoding="async">
+                    </div>
+                    <div class="events-package-body">
+                        <p class="events-package-kicker">Best for birthdays &amp; celebrations</p>
+                        <h3>Birthday Package</h3>
+                        <p>A festive, coordinated setup designed to make the day feel special and photo-ready.</p>
+                        <ul class="service-list events-list-compact">
+                            <li>Tents / canopies (as needed)</li>
+                            <li>Tables and chairs</li>
+                            <li>Decorations and styling</li>
+                            <li>Balloons and ribbons</li>
+                            <li>Theme-aligned setup coordination</li>
+                        </ul>
+                        <a href="contact.html?service=events&interest=birthday-package" class="btn-primary events-card-cta">Plan a Birthday Setup</a>
+                    </div>
                 </article>
-                <article class="card" style="padding:2rem;">
-                    <h3 style="margin-bottom:0.75rem;">Wedding Package</h3>
-                    <p style="color:var(--text-secondary); margin-bottom:1rem;">An elevated package for intimate and medium-sized weddings, with refined decorative touches.</p>
-                    <ul class="service-list" style="margin-top:0;">
-                        <li>Everything in the birthday package</li>
-                        <li>Vases and floral arrangements</li>
-                        <li>Centerpieces and table styling</li>
-                        <li>Additional decorative accents</li>
-                        <li>Layout and ambiance support tailored to your venue</li>
-                    </ul>
+
+                <article class="events-package-card events-package-featured">
+                    <div class="events-package-media">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Wedding reception table with floral centerpieces and elegant decor" loading="lazy" decoding="async">
+                    </div>
+                    <div class="events-package-body">
+                        <p class="events-package-kicker">Best for intimate &amp; medium weddings</p>
+                        <h3>Wedding Package</h3>
+                        <p>An elevated package with refined details for a warm, elegant atmosphere.</p>
+                        <ul class="service-list events-list-compact">
+                            <li>Everything in the Birthday Package</li>
+                            <li>Vases and floral arrangements</li>
+                            <li>Centerpieces and table styling</li>
+                            <li>Additional decorative accents</li>
+                            <li>Ambiance and layout support for your venue</li>
+                        </ul>
+                        <a href="contact.html?service=events&interest=wedding-package" class="btn-primary events-card-cta">Plan a Wedding Setup</a>
+                    </div>
                 </article>
-                <article class="card" style="padding:2rem;">
-                    <h3 style="margin-bottom:0.75rem;">Custom Package</h3>
-                    <p style="color:var(--text-secondary); margin-bottom:1rem;">For other occasions, we can build a package around your goals, space, and guest experience.</p>
-                    <ul class="service-list" style="margin-top:0;">
-                        <li>Private gatherings and celebrations</li>
-                        <li>Corporate and social events</li>
-                        <li>Flexible mix of decor and essentials</li>
-                        <li>Recommendations based on your consultation</li>
-                    </ul>
+
+                <article class="events-package-card">
+                    <div class="events-package-media">
+                        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=1200&auto=format&fit=crop" alt="Custom event setup with coordinated decor and seating" loading="lazy" decoding="async">
+                    </div>
+                    <div class="events-package-body">
+                        <p class="events-package-kicker">Best for unique occasions</p>
+                        <h3>Custom Package</h3>
+                        <p>A flexible combination for private, social, or corporate occasions based on your goals.</p>
+                        <ul class="service-list events-list-compact">
+                            <li>Private gatherings and celebrations</li>
+                            <li>Corporate and social events</li>
+                            <li>Mix of decor and essential rentals</li>
+                            <li>Recommendations shaped by consultation</li>
+                        </ul>
+                        <a href="contact.html?service=events&interest=custom-package" class="btn-primary events-card-cta">Request a Recommendation</a>
+                    </div>
                 </article>
             </div>
-            <p style="text-align:center; color:var(--text-secondary); margin-top:1.5rem;">Interested in a package? Reach out and we’ll help you shape the right setup for your event.</p>
+            <p class="events-inline-note">Not sure which fits? <a href="contact.html?service=events&interest=consultation">Get a tailored recommendation</a> — we’ll help you choose what you actually need.</p>
         </div>
     </section>
 
     <!-- À la carte rentals -->
-    <section class="section-padding container">
-        <div class="service-layout">
-            <div>
-                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069&auto=format&fit=crop" alt="Event tents and seating setup" class="service-img" loading="lazy" decoding="async">
-            </div>
-            <div class="service-text">
-                <h2>À La Carte <br><span class="gold-gradient">Rentals</span></h2>
-                <p>Need specific items only? You can rent essentials directly from us without taking a full package.</p>
-                <ul class="service-list">
-                    <li>Tents and canopies</li>
-                    <li>Chairs</li>
-                    <li>Tables</li>
-                    <li>Other event essentials (based on availability and your needs)</li>
-                </ul>
-                <p><strong>All-inclusive service:</strong> we deliver, set everything up, and come back to take it down after your event.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Venue & scope -->
-    <section class="tech-strip">
+    <section class="section-padding events-band events-band-elevated" id="rentals">
         <div class="container">
-            <h4>How We Support Your Event</h4>
-            <div class="tech-strip-items" style="flex-wrap:wrap; gap:0.75rem 1rem; justify-content:center;">
-                <span>Consultation &amp; Recommendations</span>
-                <span class="sep">|</span>
-                <span>Venue Sourcing (Hotels, Gardens, etc.)</span>
-                <span class="sep">|</span>
-                <span>Delivery, Setup &amp; Takedown</span>
-                <span class="sep">|</span>
-                <span>Small &amp; Medium Events</span>
+            <div class="service-layout events-rentals-layout">
+                <div class="events-rentals-media">
+                    <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?q=80&w=1400&auto=format&fit=crop" alt="Outdoor event tent and seating arrangement" class="service-img" loading="lazy" decoding="async">
+                    <div class="events-rentals-mini-grid">
+                        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=800&auto=format&fit=crop" alt="Event chairs arranged for a ceremony" loading="lazy" decoding="async">
+                        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=800&auto=format&fit=crop" alt="Decorated event tables ready for guests" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="service-text">
+                    <span class="eyebrow">Flexible Rentals</span>
+                    <h2>À La Carte <br><span class="gold-gradient">Rentals</span></h2>
+                    <p>Only need specific items? Rent essentials directly from us without taking a full package — ideal when you already have parts of your event covered.</p>
+                    <ul class="service-list">
+                        <li>Tents and canopies</li>
+                        <li>Chairs</li>
+                        <li>Tables</li>
+                        <li>Selected event essentials (based on availability and your needs)</li>
+                    </ul>
+                    <div class="events-highlight-box">
+                        <strong>All-inclusive handling:</strong> we deliver to your location, set everything up, and come back to take it down after your event.
+                    </div>
+                    <a href="contact.html?service=events&interest=rentals" class="btn-primary">Request Items &amp; Availability</a>
+                </div>
             </div>
-            <p style="color:var(--text-secondary); max-width:720px; margin:1.25rem auto 0; text-align:center;">We can also help with booking or coordinating venues such as hotels and gardens. If you already have a venue, we’ll work with your space and plan the right setup.</p>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section-padding container center">
-        <h2 class="section-title">Planning an <span class="gold-gradient">Event?</span></h2>
-        <p class="section-subtitle">Tell us what you’re hosting and we’ll recommend the right package or rental setup for your needs. No prices listed — reach out for a tailored consultation.</p>
-        <a href="contact.html" class="btn-primary btn-lg">Get in Touch</a>
+    <!-- Venue support & scope -->
+    <section class="events-venue-banner" id="venue-support">
+        <div class="events-venue-bg" aria-hidden="true"></div>
+        <div class="events-venue-overlay" aria-hidden="true"></div>
+        <div class="container events-venue-content">
+            <span class="eyebrow">Venue &amp; Scope</span>
+            <h2 class="section-title">Venue Support for <span class="gold-gradient">Small &amp; Medium Events</span></h2>
+            <p class="section-subtitle">We can help you book or coordinate venues such as hotels and gardens — or work with a venue you already have. Our focus right now is delivering high-quality setups for small and medium-sized occasions.</p>
+            <div class="events-scope-pills">
+                <span>Consultation &amp; Recommendations</span>
+                <span>Hotels &amp; Gardens Support</span>
+                <span>Delivery, Setup &amp; Takedown</span>
+                <span>Nairobi &amp; Surrounding Areas</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section-padding container" id="event-gallery">
+        <div class="center" style="margin-bottom: 2.5rem;">
+            <span class="eyebrow">Visual Inspiration</span>
+            <h2 class="section-title">Event Looks &amp; <span class="gold-gradient">Setups</span></h2>
+            <p class="section-subtitle">A sample of styles and setups we can help you create. (Images shown are placeholders for now and will be updated with our own work.)</p>
+        </div>
+        <div class="gallery-grid events-gallery-grid">
+            <article class="gallery-item">
+                <button class="gallery-trigger" type="button" data-full="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1600&auto=format&fit=crop" data-title="Wedding Table Styling" data-meta="Centerpieces, florals, and elegant table details">
+                    <div class="gallery-media"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=900&auto=format&fit=crop" alt="Wedding table styling with floral centerpieces" loading="lazy" decoding="async"></div>
+                    <div class="gallery-caption"><span class="gallery-title">Wedding Table Styling</span><span class="gallery-tag">Wedding</span></div>
+                    <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </button>
+            </article>
+            <article class="gallery-item">
+                <button class="gallery-trigger" type="button" data-full="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=1600&auto=format&fit=crop" data-title="Birthday Celebration" data-meta="Balloons, ribbons, and festive decor">
+                    <div class="gallery-media"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=900&auto=format&fit=crop" alt="Birthday celebration setup with balloons" loading="lazy" decoding="async"></div>
+                    <div class="gallery-caption"><span class="gallery-title">Birthday Celebration</span><span class="gallery-tag">Birthday</span></div>
+                    <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </button>
+            </article>
+            <article class="gallery-item">
+                <button class="gallery-trigger" type="button" data-full="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1600&auto=format&fit=crop" data-title="Tent & Seating Setup" data-meta="Outdoor structure with coordinated seating">
+                    <div class="gallery-media"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=900&auto=format&fit=crop" alt="Tent and seating setup for an outdoor event" loading="lazy" decoding="async"></div>
+                    <div class="gallery-caption"><span class="gallery-title">Tent &amp; Seating Setup</span><span class="gallery-tag">Rentals</span></div>
+                    <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </button>
+            </article>
+            <article class="gallery-item">
+                <button class="gallery-trigger" type="button" data-full="https://images.unsplash.com/photo-1478146896981-b80fe463b330?q=80&w=1600&auto=format&fit=crop" data-title="Garden Event Canopy" data-meta="Canopy, tables, and open-air ambiance">
+                    <div class="gallery-media"><img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?q=80&w=900&auto=format&fit=crop" alt="Garden event canopy with tables" loading="lazy" decoding="async"></div>
+                    <div class="gallery-caption"><span class="gallery-title">Garden Event Canopy</span><span class="gallery-tag">Venue</span></div>
+                    <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </button>
+            </article>
+            <article class="gallery-item">
+                <button class="gallery-trigger" type="button" data-full="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1600&auto=format&fit=crop" data-title="Reception Atmosphere" data-meta="Lighting, layout, and coordinated decor">
+                    <div class="gallery-media"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=900&auto=format&fit=crop" alt="Reception atmosphere with coordinated decor" loading="lazy" decoding="async"></div>
+                    <div class="gallery-caption"><span class="gallery-title">Reception Atmosphere</span><span class="gallery-tag">Experience</span></div>
+                    <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </button>
+            </article>
+            <article class="gallery-item">
+                <button class="gallery-trigger" type="button" data-full="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=1600&auto=format&fit=crop" data-title="Ceremony Details" data-meta="Decor accents and thoughtful styling">
+                    <div class="gallery-media"><img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=900&auto=format&fit=crop" alt="Ceremony decor details and styling" loading="lazy" decoding="async"></div>
+                    <div class="gallery-caption"><span class="gallery-title">Ceremony Details</span><span class="gallery-tag">Wedding</span></div>
+                    <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </button>
+            </article>
+            <article class="gallery-item">
+                <button class="gallery-trigger" type="button" data-full="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1600&auto=format&fit=crop" data-title="Seating Arrangement" data-meta="Chairs and layout prepared for guests">
+                    <div class="gallery-media"><img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=900&auto=format&fit=crop" alt="Seating arrangement with event chairs" loading="lazy" decoding="async"></div>
+                    <div class="gallery-caption"><span class="gallery-title">Seating Arrangement</span><span class="gallery-tag">Rentals</span></div>
+                    <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </button>
+            </article>
+            <article class="gallery-item">
+                <button class="gallery-trigger" type="button" data-full="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=1600&auto=format&fit=crop" data-title="Table Setup & Details" data-meta="Tables, place settings, and finishing touches">
+                    <div class="gallery-media"><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=900&auto=format&fit=crop" alt="Event table setup and details" loading="lazy" decoding="async"></div>
+                    <div class="gallery-caption"><span class="gallery-title">Table Setup &amp; Details</span><span class="gallery-tag">Decor</span></div>
+                    <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </button>
+            </article>
+        </div>
+    </section>
+
+    <!-- Testimonials & FAQ (color break) -->
+    <section class="section-padding events-band events-band-warm" id="faq">
+        <div class="container">
+            <div class="events-proof-grid">
+                <div>
+                    <span class="eyebrow">What Clients Value</span>
+                    <h2 class="section-title">A Premium, <span class="gold-gradient">Stress-Free</span> Experience</h2>
+                    <p class="section-subtitle" style="margin-left:0;">We focus on the details that make an event feel cohesive, comfortable, and well-executed — from first consultation to final takedown.</p>
+                    <div class="events-testimonials">
+                        <blockquote class="events-testimonial">
+                            <p>“The consultation made everything easy — we got exactly what we needed without overcomplicating the setup.”</p>
+                            <cite>Birthday celebration client</cite>
+                        </blockquote>
+                        <blockquote class="events-testimonial">
+                            <p>“Delivery, setup, and takedown were handled smoothly. It let us focus on the day instead of logistics.”</p>
+                            <cite>Private event host</cite>
+                        </blockquote>
+                        <blockquote class="events-testimonial">
+                            <p>“The decor and table details brought the whole space together beautifully for a medium-sized gathering.”</p>
+                            <cite>Wedding reception client</cite>
+                        </blockquote>
+                    </div>
+                </div>
+                <div>
+                    <span class="eyebrow">FAQ</span>
+                    <h2 class="section-title">Common <span class="gold-gradient">Questions</span></h2>
+                    <div class="events-faq">
+                        <details class="events-faq-item" open>
+                            <summary>What size of events do you cater for?</summary>
+                            <p>We currently focus on <strong>small and medium-sized events</strong> to ensure a high-quality, well-managed experience.</p>
+                        </details>
+                        <details class="events-faq-item">
+                            <summary>Can I book a full package or rent individual items?</summary>
+                            <p>Both. You can choose a curated package (birthday, wedding, or custom) or rent specific items like tents, chairs, and tables on their own.</p>
+                        </details>
+                        <details class="events-faq-item">
+                            <summary>Do you handle delivery, setup, and takedown?</summary>
+                            <p>Yes. For rentals and packages, we deliver, set everything up, and come back after the event to take it down — all-inclusive service.</p>
+                        </details>
+                        <details class="events-faq-item">
+                            <summary>Can you help us find or book a venue?</summary>
+                            <p>Yes. We can help with booking or coordinating venues such as hotels and gardens. If you already have a venue, we’ll plan around your space.</p>
+                        </details>
+                        <details class="events-faq-item">
+                            <summary>How do I get a quote or recommendation?</summary>
+                            <p>Share your event type, date, location, and estimated guest count. We’ll consult with you and recommend the right setup. (We don’t list fixed prices — every event is tailored.)</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section events-cta">
+        <div class="grid-bg grid-animated"></div>
+        <div class="cta-overlay"></div>
+        <div class="container cta-content">
+            <span class="eyebrow">Ready to Plan?</span>
+            <h2 class="section-title">Let’s Design the Right <br><span class="gold-gradient">Setup for Your Event</span></h2>
+            <p class="section-subtitle">Tell us your event type, preferred date, location/venue, and estimated guest count. We’ll recommend the best package or rental combination for your needs.</p>
+            <div class="hero-actions" style="justify-content:center;">
+                <a href="contact.html?service=events" class="btn-primary btn-lg">Book a Consultation</a>
+                <a href="https://wa.me/254799213928?text=Hi%20CarlteQ%2C%20I%27d%20like%20help%20planning%20an%20event.%20Event%20type%3A%20%5B%5D%20Date%3A%20%5B%5D%20Location%3A%20%5B%5D%20Guests%3A%20%5B%5D" class="btn-outline btn-lg" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            </div>
+        </div>
     </section>
 
     </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+        <button class="lightbox-close" type="button" aria-label="Close image viewer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <figure class="lightbox-figure">
+            <img id="lightbox-image" src="" alt="">
+            <figcaption>
+                <span class="lightbox-title" id="lightbox-title"></span>
+                <span class="lightbox-meta" id="lightbox-meta"></span>
+            </figcaption>
+        </figure>
+        <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+    </div>
 
     <!-- Footer -->
     <footer id="site-footer" data-shared-footer></footer>
