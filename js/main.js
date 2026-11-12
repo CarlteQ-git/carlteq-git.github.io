@@ -664,14 +664,14 @@
         function updateCursorSurface(x, y) {
             try {
                 var el = document.elementFromPoint(x, y);
-                var inWhite = false;
+                var inLight = false;
                 while (el && el !== document.body && el !== document.documentElement) {
-                    if (el.classList && el.classList.contains('section-white')) { inWhite = true; break; }
+                    if (el.classList && (el.classList.contains('section-white') || el.classList.contains('events-band-warm'))) { inLight = true; break; }
                     el = el.parentElement;
                 }
-                dotWrap.classList.toggle('in-white', inWhite);
-                ringWrap.classList.toggle('in-white', inWhite);
-                if (pulse) pulse.classList.toggle('in-white', inWhite);
+                dotWrap.classList.toggle('in-white', inLight);
+                ringWrap.classList.toggle('in-white', inLight);
+                if (pulse) pulse.classList.toggle('in-white', inLight);
             } catch (e) {}
         }
 
