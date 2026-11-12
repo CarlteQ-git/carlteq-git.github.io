@@ -739,6 +739,25 @@
         start();
     }
 
+    /* ---------- Shared Footer ---------- */
+    function initSharedFooter() {
+        var footers = document.querySelectorAll('footer[data-shared-footer], footer#site-footer');
+        if (!footers.length) {
+            // opt-in by replacing standard footers that contain footer-inner (site pages)
+            footers = document.querySelectorAll('footer');
+        }
+        if (!footers.length) return;
+        fetch('partials/footer.html', { cache: 'no-cache' })
+            .then(function (res) { if (!res.ok) throw new Error('Footer fetch failed'); return res.text(); })
+            .then(function (html) {
+                footers.forEach(function (footer) {
+                    footer.innerHTML = html;
+                    footer.setAttribute('data-shared-footer', 'loaded');
+                });
+            })
+            .catch(function () { /* keep existing footer as fallback */ });
+    }
+
     /* ---------- Legacy Reveal Fallback (for inner pages) ---------- */
     function initLegacyReveal() {
         var revealEls = document.querySelectorAll('.reveal');
@@ -764,6 +783,7 @@
                      window.location.pathname.endsWith('/') ||
                      window.location.pathname === '';
 
+        initSharedFooter();
         initMobileMenu();
         initSmoothScroll();
         initPortfolioFilter();
