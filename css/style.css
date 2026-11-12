@@ -1284,26 +1284,26 @@ html.cursor-none select { cursor: auto; }
 
 /* Warm contrast section (no pure white) */
 .section-white {
-    background: #f3eada;
+    background: #dfcfa8;
     color: #1a1712;
-    border-top: 1px solid rgba(26, 23, 18, 0.08);
-    border-bottom: 1px solid rgba(26, 23, 18, 0.08);
+    border-top: 1px solid rgba(26, 23, 18, 0.1);
+    border-bottom: 1px solid rgba(26, 23, 18, 0.1);
 }
 .section-white .section-title { color: #1a1712; }
-.section-white .section-subtitle { color: #4a4336; }
-.section-white .eyebrow { color: #8a6a1f; }
+.section-white .section-subtitle { color: #3f382a; }
+.section-white .eyebrow { color: #7a5a12; }
 .section-white .grid-bg { display: none; }
-.section-white .sticky-card { background: #fbf6ec; color: #1a1712; border-color: rgba(26, 23, 18, 0.12); }
-.section-white .sticky-card p { color: #4a4336; }
+.section-white .sticky-card { background: #eadfc2; color: #1a1712; border-color: rgba(26, 23, 18, 0.14); box-shadow: 0 12px 30px rgba(26, 23, 18, 0.08); }
+.section-white .sticky-card p { color: #3f382a; }
 
-/* Darker cursor on warm light section for visibility */
+/* Dark cursor on warm light section for visibility */
 .cursor-item.in-white .cursor-dot {
-    background: #1a1712;
-    box-shadow: 0 0 8px rgba(26, 23, 18, 0.7), 0 0 18px rgba(212, 175, 55, 0.35);
+    background: #0b0e14;
+    box-shadow: 0 0 0 1px rgba(255, 248, 230, 0.35), 0 0 10px rgba(11, 14, 20, 0.55), 0 0 22px rgba(212, 175, 55, 0.25);
 }
 .cursor-item.in-white .cursor-ring {
-    border-color: rgba(26, 23, 18, 0.65);
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(26, 23, 18, 0.04) 70%);
-    box-shadow: 0 0 18px rgba(26, 23, 18, 0.18), inset 0 0 14px rgba(212, 175, 55, 0.12);
+    border-color: rgba(11, 14, 20, 0.8);
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.16) 0%, rgba(11, 14, 20, 0.06) 70%);
+    box-shadow: 0 0 0 1px rgba(255, 248, 230, 0.25), 0 0 22px rgba(11, 14, 20, 0.22), inset 0 0 16px rgba(212, 175, 55, 0.14);
 }
-.cursor-item.in-white .cursor-label { color: #1a1712; }
+.cursor-item.in-white .cursor-label { color: #0b0e14; }

@@ -661,6 +661,20 @@
             rafId = 0;
         }
 
+        function updateCursorSurface(x, y) {
+            try {
+                var el = document.elementFromPoint(x, y);
+                var inWhite = false;
+                while (el && el !== document.body && el !== document.documentElement) {
+                    if (el.classList && el.classList.contains('section-white')) { inWhite = true; break; }
+                    el = el.parentElement;
+                }
+                dotWrap.classList.toggle('in-white', inWhite);
+                ringWrap.classList.toggle('in-white', inWhite);
+                if (pulse) pulse.classList.toggle('in-white', inWhite);
+            } catch (e) {}
+        }
+
         document.addEventListener('mousemove', function (e) {
             mx = e.clientX;
             my = e.clientY;
@@ -670,6 +684,7 @@
                 ry = my;
                 syncVisibility();
             }
+            updateCursorSurface(e.clientX, e.clientY);
         }, { passive: true });
 
         document.addEventListener('mouseenter', function () {
