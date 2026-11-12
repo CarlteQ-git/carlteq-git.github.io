@@ -1282,31 +1282,28 @@ html.cursor-none select { cursor: auto; }
 }
 
 
-/* White contrast sections for pop */
+/* Warm contrast section (no pure white) */
 .section-white {
-    background: #f7f5f0;
-    color: #101820;
-    border-top: 1px solid rgba(16, 24, 32, 0.08);
-    border-bottom: 1px solid rgba(16, 24, 32, 0.08);
+    background: #f3eada;
+    color: #1a1712;
+    border-top: 1px solid rgba(26, 23, 18, 0.08);
+    border-bottom: 1px solid rgba(26, 23, 18, 0.08);
 }
-.section-white .section-title { color: #101820; }
-.section-white .section-subtitle { color: #3f3a32; }
-.section-white .eyebrow { color: var(--gold-dark); }
+.section-white .section-title { color: #1a1712; }
+.section-white .section-subtitle { color: #4a4336; }
+.section-white .eyebrow { color: #8a6a1f; }
 .section-white .grid-bg { display: none; }
-.section-white .sticky-card { background: #ffffff; color: #101820; border-color: rgba(16, 24, 32, 0.12); }
-.section-white .sticky-card p { color: #3f3a32; }
+.section-white .sticky-card { background: #fbf6ec; color: #1a1712; border-color: rgba(26, 23, 18, 0.12); }
+.section-white .sticky-card p { color: #4a4336; }
 
-/* Blue cursor on white sections for visibility */
-.section-white ~ .cursor-item .cursor-dot,
-.section-white + .cursor-item .cursor-dot,
+/* Darker cursor on warm light section for visibility */
 .cursor-item.in-white .cursor-dot {
-    background: #0b7bff;
-    box-shadow: 0 0 8px rgba(11, 123, 255, 0.95), 0 0 22px rgba(11, 123, 255, 0.6);
+    background: #1a1712;
+    box-shadow: 0 0 8px rgba(26, 23, 18, 0.7), 0 0 18px rgba(212, 175, 55, 0.35);
 }
-.section-white ~ .cursor-item .cursor-ring,
-.section-white + .cursor-item .cursor-ring,
 .cursor-item.in-white .cursor-ring {
-    border-color: rgba(11, 123, 255, 0.7);
-    background: radial-gradient(circle, rgba(11, 123, 255, 0.12) 0%, rgba(11, 123, 255, 0.04) 70%);
-    box-shadow: 0 0 18px rgba(11, 123, 255, 0.24), inset 0 0 16px rgba(11, 123, 255, 0.14);
+    border-color: rgba(26, 23, 18, 0.65);
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(26, 23, 18, 0.04) 70%);
+    box-shadow: 0 0 18px rgba(26, 23, 18, 0.18), inset 0 0 14px rgba(212, 175, 55, 0.12);
 }
+.cursor-item.in-white .cursor-label { color: #1a1712; }
