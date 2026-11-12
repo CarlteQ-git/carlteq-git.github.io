@@ -1352,17 +1352,19 @@ html.cursor-none select { cursor: auto; }
 .events-band-warm .section-title,
 .events-band-warm .events-step h3,
 .events-band-warm .events-package-card h3,
-.events-band-warm .events-faq-item summary { color: #1a1712; }
+.events-band-warm .events-faq-item summary { color: #14110c; }
 .events-band-warm .section-subtitle,
 .events-band-warm .events-step p,
 .events-band-warm .events-package-card p,
+.events-band-warm .events-package-card li,
 .events-band-warm .events-faq-item p,
 .events-band-warm .events-testimonial p,
-.events-band-warm .events-inline-note { color: #3f382a; }
+.events-band-warm .events-inline-note { color: #2f281d; }
 .events-band-warm .eyebrow,
 .events-band-warm .events-step-num,
-.events-band-warm .events-package-kicker { color: #7a5a12; }
-.events-band-warm .events-inline-note a { color: #7a5a12; font-weight: 600; }
+.events-band-warm .events-package-kicker { color: #5c430d; }
+.events-band-warm .events-inline-note a { color: #5c430d; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.events-band-warm .events-inline-note a:hover { color: #3f2d08; }
 
 .events-steps {
     display: grid;
@@ -1374,12 +1376,15 @@ html.cursor-none select { cursor: auto; }
     border: 1px solid rgba(212, 175, 55, 0.12);
     border-radius: 16px;
     padding: 1.5rem;
+    transition: transform 0.3s var(--ease-out-expo), border-color 0.3s ease, box-shadow 0.3s ease;
 }
+.events-step:hover { transform: translateY(-4px); border-color: rgba(212, 175, 55, 0.28); box-shadow: 0 14px 30px rgba(0,0,0,0.18); }
 .events-band-warm .events-step {
     background: #efe6d1;
-    border-color: rgba(26, 23, 18, 0.12);
+    border-color: rgba(26, 23, 18, 0.14);
     box-shadow: 0 10px 24px rgba(26, 23, 18, 0.06);
 }
+.events-band-warm .events-step:hover { box-shadow: 0 16px 34px rgba(26, 23, 18, 0.1); border-color: rgba(92, 67, 13, 0.25); }
 .events-step-num {
     display: inline-block;
     font-family: var(--font-mono);
@@ -1388,8 +1393,8 @@ html.cursor-none select { cursor: auto; }
     color: var(--gold-light);
     margin-bottom: 0.75rem;
 }
-.events-step h3 { margin-bottom: 0.5rem; font-size: 1.2rem; }
-.events-step p { color: var(--text-secondary); font-size: 0.98rem; }
+.events-step h3 { margin-bottom: 0.5rem; font-size: 1.2rem; color: var(--text-primary); }
+.events-step p { color: rgba(239, 244, 251, 0.82); font-size: 0.98rem; }
 
 .events-package-grid {
     display: grid;
@@ -1398,16 +1403,17 @@ html.cursor-none select { cursor: auto; }
 }
 .events-package-card {
     background: #f4ecda;
-    color: #1a1712;
-    border: 1px solid rgba(26, 23, 18, 0.12);
+    color: #14110c;
+    border: 1px solid rgba(26, 23, 18, 0.14);
     border-radius: 18px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     box-shadow: 0 16px 40px rgba(26, 23, 18, 0.08);
-    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo);
+    transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo), border-color 0.35s ease;
 }
-.events-package-card:hover { transform: translateY(-4px); box-shadow: 0 22px 50px rgba(26, 23, 18, 0.12); }
+.events-package-card:hover { transform: translateY(-6px); box-shadow: 0 24px 54px rgba(26, 23, 18, 0.14); border-color: rgba(92, 67, 13, 0.3); }
+.events-package-card .btn-primary { color: #0b0e14; }
 .events-package-featured { border-color: rgba(122, 90, 18, 0.35); box-shadow: 0 18px 46px rgba(122, 90, 18, 0.12); }
 .events-package-media { aspect-ratio: 16 / 10; overflow: hidden; }
 .events-package-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s var(--ease-out-expo); }
@@ -1430,10 +1436,11 @@ html.cursor-none select { cursor: auto; }
     margin: 1.25rem 0 1.5rem;
     padding: 1rem 1.1rem;
     border-radius: 12px;
-    background: rgba(212, 175, 55, 0.08);
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    color: var(--text-primary);
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    color: #f4f7fc;
 }
+.events-highlight-box strong { color: var(--gold-light); }
 
 .events-venue-banner { position: relative; padding: 6rem 0; overflow: hidden; }
 .events-venue-bg {
@@ -1474,7 +1481,7 @@ html.cursor-none select { cursor: auto; }
     border-radius: 14px;
 }
 .events-testimonial p { font-size: 1rem; line-height: 1.7; margin-bottom: 0.5rem; }
-.events-testimonial cite { font-style: normal; font-size: 0.9rem; color: #6a5a3a; font-weight: 600; }
+.events-testimonial cite { font-style: normal; font-size: 0.9rem; color: #4a3d22; font-weight: 600; }
 
 .events-faq { display: grid; gap: 0.75rem; margin-top: 1rem; }
 .events-faq-item {
@@ -1515,5 +1522,25 @@ html.cursor-none select { cursor: auto; }
     .events-steps { grid-template-columns: 1fr; }
     .events-rentals-mini-grid { grid-template-columns: 1fr; }
     .events-hero-actions, .events-cta .hero-actions { flex-direction: column; }
+}
+
+
+/* Events motion & interactivity */
+.events-hero-media img { transition: transform 8s ease; }
+.events-hero-media:hover img { transform: scale(1.04); }
+.events-scope-pills span { transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease; }
+.events-scope-pills span:hover { transform: translateY(-2px); border-color: rgba(212,175,55,0.45); background: rgba(12,26,43,0.75); }
+.events-faq-item { transition: border-color 0.25s ease, box-shadow 0.25s ease; }
+.events-faq-item:hover { border-color: rgba(92,67,13,0.28); box-shadow: 0 8px 20px rgba(26,23,18,0.06); }
+.events-faq-item summary { transition: color 0.2s ease; }
+.events-faq-item summary:hover { color: #3f2d08; }
+.events-gallery-grid .gallery-item { transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s ease; }
+.events-gallery-grid .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0,0,0,0.25); }
+.events-rentals-mini-grid img { transition: transform 0.4s var(--ease-out-expo), border-color 0.3s ease; }
+.events-rentals-mini-grid img:hover { transform: scale(1.03); border-color: rgba(212,175,55,0.3); }
+.events-band-warm .events-testimonial { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.events-band-warm .events-testimonial:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(26,23,18,0.08); }
+@media (prefers-reduced-motion: reduce) {
+    .events-hero-media img, .events-scope-pills span, .events-faq-item, .events-gallery-grid .gallery-item, .events-rentals-mini-grid img, .events-band-warm .events-testimonial { transition: none !important; }
 }
 
