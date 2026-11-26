@@ -1737,21 +1737,21 @@ html.cursor-none select { cursor: auto; }
 .about-timeline-dot {
     position: absolute;
     top: 0.45rem;
-    right: -1.75rem;
+    left: 5.5rem;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background: #f3ecdc;
-    border: 2px solid rgba(122, 90, 18, 0.55);
-    transform: translateX(50%);
+    border: 2px solid #4d8fd6;
+    transform: translateX(-50%);
     transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
     z-index: 1;
 }
 .about-timeline-item.active .about-timeline-dot,
 .about-timeline-item:hover .about-timeline-dot {
-    background: #7a5a12;
-    border-color: #7a5a12;
-    transform: translateX(50%) scale(1.15);
+    background: #4d8fd6;
+    border-color: #4d8fd6;
+    transform: translateX(-50%) scale(1.15);
 }
 .about-timeline-content .sticky-card-number {
     color: #7a5a12;
@@ -1773,7 +1773,7 @@ html.cursor-none select { cursor: auto; }
     .about-sticky { min-height: 0; gap: 2rem; }
     .about-timeline::before { left: 4.75rem; }
     .about-timeline-item.sticky-card { grid-template-columns: 4.75rem 1fr; }
-    .about-timeline-dot { right: -1.75rem; }
+    .about-timeline-dot { left: 4.75rem; }
 }
 @media (max-width: 640px) {
     .about-proof-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; }
