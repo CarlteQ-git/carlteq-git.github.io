@@ -487,7 +487,7 @@ nav {
     display: grid;
     grid-template-columns: 420px 1fr;
     gap: 5rem;
-    align-items: center;
+    align-items: start;
     position: relative;
 }
 .founder-portrait {
@@ -519,6 +519,8 @@ nav {
     z-index: -1;
 }
 .founder-info { min-width: 0; }
+.founder-info-sticky { position: sticky; top: 8rem; }
+.founder-portfolio-link { margin-top: 1.75rem; display: inline-flex; }
 .founder-name {
     font-size: 1.9rem;
     font-weight: 700;
@@ -1067,6 +1069,7 @@ body.lightbox-open { overflow: hidden; }
 
     .sticky-layout { grid-template-columns: 1fr; }
     .sticky-sticky { position: relative; top: 0; }
+    .founder-info-sticky { position: relative; top: 0; }
     .vision-grid { grid-template-columns: 1fr; }
     .founder-layout { grid-template-columns: 1fr; gap: 3rem; }
     .founder-portrait { max-width: 380px; }
