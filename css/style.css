@@ -1646,3 +1646,149 @@ html.cursor-none select { cursor: auto; }
     .brand-hero-media img, .brand-mini-grid img, .brand-offer-card { transition: none !important; }
 }
 
+
+
+/* ============================================================
+   ABOUT / STRATEGIC RESILIENCE - EDITORIAL STORY + PROOF
+   ============================================================ */
+.about-layout { align-items: stretch; }
+.about-sticky {
+    min-height: calc(100vh - 12rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+.about-sticky-top .eyebrow { margin-bottom: 0.75rem; }
+.about-sticky-top .section-subtitle { max-width: 34rem; margin-bottom: 0; }
+.about-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.about-proof-item {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(26, 23, 18, 0.14);
+}
+.about-proof-value {
+    display: block;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: #7a5a12;
+    margin-bottom: 0.35rem;
+}
+.about-proof-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #4a4030;
+}
+.about-cta { align-self: flex-start; }
+
+.about-timeline {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 0;
+}
+.about-timeline::before {
+    content: '';
+    position: absolute;
+    left: 5.5rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 1px;
+    background: linear-gradient(180deg, rgba(122, 90, 18, 0.1), rgba(122, 90, 18, 0.45), rgba(122, 90, 18, 0.1));
+}
+.about-timeline-item.sticky-card {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem 0 1.75rem 0;
+    margin-bottom: 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(26, 23, 18, 0.1);
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+}
+.about-timeline-item.sticky-card::before { display: none; }
+.about-timeline-item.sticky-card:hover {
+    transform: translateX(4px);
+    border-color: rgba(26, 23, 18, 0.1);
+    border-bottom-color: rgba(122, 90, 18, 0.28);
+}
+.about-timeline-item:last-child { border-bottom: none; padding-bottom: 0; }
+.about-timeline-marker {
+    position: relative;
+    padding-top: 0.2rem;
+}
+.about-timeline-year {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #7a5a12;
+}
+.about-timeline-dot {
+    position: absolute;
+    top: 0.45rem;
+    right: -1.75rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f3ecdc;
+    border: 2px solid rgba(122, 90, 18, 0.55);
+    transform: translateX(50%);
+    transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    z-index: 1;
+}
+.about-timeline-item.active .about-timeline-dot,
+.about-timeline-item:hover .about-timeline-dot {
+    background: #7a5a12;
+    border-color: #7a5a12;
+    transform: translateX(50%) scale(1.15);
+}
+.about-timeline-content .sticky-card-number {
+    color: #7a5a12;
+    margin-bottom: 0.5rem;
+}
+.about-timeline-content h3 {
+    font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+    margin-bottom: 0.75rem;
+    color: #14110c;
+}
+.about-timeline-content p {
+    color: #3f382a;
+    font-size: 1.02rem;
+    line-height: 1.8;
+    max-width: 38rem;
+}
+
+@media (max-width: 1024px) {
+    .about-sticky { min-height: 0; gap: 2rem; }
+    .about-timeline::before { left: 4.75rem; }
+    .about-timeline-item.sticky-card { grid-template-columns: 4.75rem 1fr; }
+    .about-timeline-dot { right: -1.75rem; }
+}
+@media (max-width: 640px) {
+    .about-proof-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; }
+    .about-timeline::before { left: 0.55rem; top: 0.75rem; bottom: 0.75rem; }
+    .about-timeline-item.sticky-card {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 1.5rem 0 1.5rem 1.75rem;
+    }
+    .about-timeline-marker { padding-top: 0; }
+    .about-timeline-dot { left: 0.55rem; right: auto; top: 1.85rem; transform: translateX(-50%); }
+    .about-timeline-item.active .about-timeline-dot,
+    .about-timeline-item:hover .about-timeline-dot { transform: translateX(-50%) scale(1.15); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .about-timeline-item.sticky-card, .about-timeline-dot { transition: none !important; }
+}
+
